@@ -6,12 +6,12 @@ mixpanel.init("cefb5214f48a583fbbad4b86dbdfd2f1");</script>
 <script type="text/javascript">
   mixpanel.track("signup sukses");
 
-  mixpanel.identify("2");
+  mixpanel.identify("3");
   mixpanel.people.set({
-      "$first_name": "padlian",
-      "$last_name": "chairi",
-      "$email": "Mail@gmail.com",
-      "$last_login": "2016-02-11 09:00:08",
+      "$first_name": "padli",
+      "$last_name": "tamvan",
+      "$email": "tamvan@berani.com",
+      "$signup-date": "2016-11-16 09:00:08",
   });
   
 </script>

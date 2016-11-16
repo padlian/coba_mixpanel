@@ -36,6 +36,10 @@
         </div>
         <div class="col-md-12">
           <button class="btn btn-primary" id="tbl1">Tombol 1</button>
+          <button class="btn btn-primary" id="tbl2">Tombol 2</button>
+          <button class="btn btn-primary" id="tbl2a">Tombol 2a</button>
+          <br/>
+          <a href="https://facebook.com" id="btn_fb">Facebook</a>
           <br/>
           <a href="signup.php" id="tbl_signup">Sign Up</a>
         </div>
@@ -51,6 +55,28 @@
 
       $("#tbl1").click(function(){
         mixpanel.track("tombol 1");
+      });
+
+      $("#tbl2").click(function(){
+        mixpanel.track(
+          "tombol 2",
+          {"isi": "tamvan"}
+        );
+      });
+
+      $("#tbl2a").click(function(){
+        mixpanel.track(
+          "tombol 2",
+          {"fungsi": "itulah"}
+        );
+      });
+
+      $("#btn_fb").click(function(event){
+        var cb = generate_callback($(this));
+        var alamat = $(this).attr("href");
+        event.preventDefault();
+        mixpanel.track("ke facebook");
+        setTimeout(cb, 500);
       });
 
       $("#tbl_signup").click(function(event) {
